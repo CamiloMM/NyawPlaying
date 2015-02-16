@@ -1,0 +1,13 @@
+
+#playlists {
+
+}
+
+#playlists li {
+    background-color: #fff;
+    color: #000;
+}
+
+#playlists li:nth-child(2) {
+    background-color: #eee;
+}
