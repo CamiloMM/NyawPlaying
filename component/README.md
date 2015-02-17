@@ -1,6 +1,6 @@
 This is the component you'll need installed in Foobar2000 to provide information to NyawPlaying.
 
-It is a modified version of [`foo_catnap`][1].
+It is a modified version of [`foo_catnap`][1], with a bug fixed, new fields, and changed port/name to avoid conflicts (just in case).
 
 **Note:** This component may require:
 
