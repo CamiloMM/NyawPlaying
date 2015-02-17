@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CamiloMM/NyawPlaying/issues"
   },
-  "homepage": "https://github.com/CamiloMM/NyawPlaying"
+  "homepage": "https://github.com/CamiloMM/NyawPlaying",
+  "dependencies": {
+    "jquery": "^2.1.3"
+  }
 }
