@@ -96,7 +96,7 @@ body, html { padding: 0; }
     overflow: hidden;
     text-overflow: ellipsis;
     font: 48px Asap, sans-serif;
-    left: 360px;
+    left: calc(100vw - 120px);
     bottom: -4px;
     letter-spacing: -1px;
 }
