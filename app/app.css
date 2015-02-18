@@ -48,7 +48,7 @@ body, html { padding: 0; }
 
 #title {
     position: absolute;
-    font: 18px Asap, sans-serif;
+    font: 18px/21px Asap, sans-serif, "Meiryo UI", "Malgun Gothic", "Microsoft YaHei", "Microsoft JhengHei";
     color: #FFF2F0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -61,7 +61,7 @@ body, html { padding: 0; }
 
 #artist {
     position: absolute;
-    font: italic 15px Asap, sans-serif;
+    font: italic 15px/17px Asap, sans-serif, "Meiryo UI", "Malgun Gothic", "Microsoft YaHei", "Microsoft JhengHei";
     color: #FFDFD9;
     overflow: hidden;
     text-overflow: ellipsis;
