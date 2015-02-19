@@ -65,7 +65,7 @@ function asTime(seconds) {
 
 // These two parse the song's title/artist from a filename like "[artist] title" or "title"
 function parseTitle(filename) { return filename.replace(/^\[[^\]]+\]\s*/, ''); }
-function parseArtist(filename) { return filename.replace(/^\[([^\]]+)\].*$/, '$1'); }
+function parseArtist(filename) { return filename.replace(/^(\[([^\]]+)\])?.*$/, '$2'); }
 
 // Updates title attributes.
 function updateTitles() {
