@@ -63,9 +63,15 @@ function asTime(seconds) {
     return min + ':' + (sec < 10 ? '0' + sec : sec);
 }
 
-// These two parse the song's title/artist from a filename like "[artist] title" or "title"
-function parseTitle(filename) { return filename.replace(/^\[[^\]]+\]\s*/, ''); }
-function parseArtist(filename) { return filename.replace(/^(\[([^\]]+)\])?.*$/, '$2'); }
+// These two parse the song's title/artist from a filename like
+// "[artist] title", "artist - title" or "title" (no artist).
+function parseTitle(filename) {
+    return filename.replace(/^(\[[^\]]+\]\s*|[^-]+ -\s+)/, '');
+}
+function parseArtist(filename) {
+    return filename.replace(/^(\[([^\]]+)\])?.*$/, '$2') ||
+           filename.replace(/^(([^-]+)( - ))?.*$/, '$2');
+}
 
 // Updates title attributes.
 function updateTitles() {
