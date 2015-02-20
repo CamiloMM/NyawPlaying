@@ -1,4 +1,6 @@
-var $ = require('jquery');
+var $      = require('jquery');
+var gui    = require('nw.gui');
+var Window = gui.Window.get();
 
 $(function() {
     function connect(callback) {
@@ -53,6 +55,11 @@ $(function() {
         }
         updateTitles();
     });
+    
+    // For some reason the window changes size on restore, to an invalid size even.
+    var originalWidth = 480;
+    Window.on('restore', function() { Window.resizeTo(originalWidth, 48); });
+    $(Window.window).resize(function() { originalWidth = Window.width; });
 });
 
 // Converts seconds to M:SS format
