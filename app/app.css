@@ -2,7 +2,7 @@
 
 body, html { padding: 0; }
 
-#program {
+#program, #options {
     position: absolute;
     margin: 0;
     top: 0;
@@ -127,4 +127,10 @@ body, html { padding: 0; }
 
 #progress-overlay .time {
     color: #FFBDB1;
+}
+
+#options {
+    z-index: 64;
+    visibility: hidden;
+    background: #FB969F;
 }

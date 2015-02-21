@@ -60,6 +60,12 @@ $(function() {
     var originalWidth = 480;
     Window.on('restore', function() { Window.resizeTo(originalWidth, 48); });
     $(Window.window).resize(function() { originalWidth = Window.width; });
+
+    // Options panel.
+    $('#program').on('contextmenu', function(e) {
+        e.preventDefault();
+        $('#options').css({visibility: 'visible'});
+    });
 });
 
 // Converts seconds to M:SS format
