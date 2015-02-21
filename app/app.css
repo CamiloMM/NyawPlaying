@@ -34,24 +34,11 @@ body, html { padding: 0; }
     height: 42px;
 }
 
-[data-status="playing"] #icon {
-    background: url('icons/play.png');
-}
-
-[data-status="paused"] #icon {
-    background: url('icons/pause.png');
-}
-
-[data-status="stopped"] #icon {
-    background: url('icons/stop.png');
-}
-
 #title {
     position: absolute;
     font: 18px/21px Asap, Roboto, sans-serif, "Meiryo UI", "Meiryo",
                     "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
                     "Microsoft JhengHei UI", "Microsoft JhengHei";
-    color: #FFF2F0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -66,7 +53,6 @@ body, html { padding: 0; }
     font: italic 15px/17px Asap, Roboto, sans-serif, "Meiryo UI", "Meiryo",
                            "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
                            "Microsoft JhengHei UI", "Microsoft JhengHei";
-    color: #FFDFD9;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -77,7 +63,6 @@ body, html { padding: 0; }
 }
 
 .progress {
-    background: #FB969F;
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -109,28 +94,25 @@ body, html { padding: 0; }
     width: 100%;
 }
 
-#progress-background .bar {
-    background: #CF777F;
-}
-
-#progress-background .time {
-    color: #CF777F;
-}
-
 #progress-overlay {
     z-index: 16;
-}
-
-#progress-overlay .bar {
-    background: #FFBDB1;
-}
-
-#progress-overlay .time {
-    color: #FFBDB1;
 }
 
 #options {
     z-index: 64;
     visibility: hidden;
-    background: #FB969F;
 }
+
+/* Color scheme declarations */
+
+[data-style="pink"] #title                        {      color: #FFF2F0; }
+[data-style="pink"] #artist                       {      color: #FFDFD9; }
+[data-style="pink"] #progress-background .time    {      color: #CF777F; }
+[data-style="pink"] #progress-overlay .time       {      color: #FFBDB1; }
+[data-style="pink"] .progress                     { background: #FB969F; }
+[data-style="pink"] #progress-background .bar     { background: #CF777F; }
+[data-style="pink"] #progress-overlay .bar        { background: #FFBDB1; }
+[data-style="pink"] #options                      { background: #FB969F; }
+[data-style="pink"] [data-status="playing"] #icon { background: url('icons/play.png' ); }
+[data-style="pink"] [data-status="paused"]  #icon { background: url('icons/pause.png'); }
+[data-style="pink"] [data-status="stopped"] #icon { background: url('icons/stop.png' ); }
