@@ -66,6 +66,10 @@ $(function() {
         e.preventDefault();
         $('#options').css({visibility: 'visible'});
     });
+
+    $('#options .close').click(function() {
+        $('#options').css({visibility: 'hidden'});
+    });
 });
 
 // Converts seconds to M:SS format

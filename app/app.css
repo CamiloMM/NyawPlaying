@@ -117,6 +117,21 @@ body, html { padding: 0; }
     text-shadow: 0 1px 0 #CCC;
 }
 
+#options .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 18px;
+    font: 14px/16px Asap, sans-serif;
+    font-weight: bold;
+    color: #EEE;
+    text-shadow: 0 1px 0 #222;
+    background: #888;
+    text-align: center;
+    cursor: pointer;
+}
+
 #styles {
     position: absolute;
     top: 21px;
