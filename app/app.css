@@ -154,10 +154,6 @@ body, html { padding: 0; }
     width: 80px;
     text-align: center;
     cursor: pointer;
-    background: #FB969F;
-    border-bottom: 4px solid #CF777F;
-    color: #FFDFD9;
-    font: 14px/20px Asap, sans-serif;
     box-shadow: 0 0 2px 1px #888;
 }
 
@@ -168,6 +164,12 @@ body, html { padding: 0; }
 /* Color scheme declarations */
 
 /* HyanPink ("pink") */
+[data-option="pink"].style {
+    background: #FB969F;
+    color: #FFDFD9;
+    border-bottom: 4px solid #CF777F;
+    font: 14px/20px Asap, sans-serif;
+}
 [data-style="pink"] #title                        {      color: #FFF2F0; }
 [data-style="pink"] #artist                       {      color: #FFDFD9; }
 [data-style="pink"] #progress-background .time    {      color: #CF777F; }
@@ -178,3 +180,11 @@ body, html { padding: 0; }
 [data-style="pink"] [data-status="playing"] #icon { background: url('icons/play.png' ); }
 [data-style="pink"] [data-status="paused"]  #icon { background: url('icons/pause.png'); }
 [data-style="pink"] [data-status="stopped"] #icon { background: url('icons/stop.png' ); }
+
+/* Holo Dark ("holo-d") */
+[data-option="holo-d"].style {
+    background: #202020;
+    color: #33B5E5;
+    border-bottom: 4px solid #33B5E5;
+    font: 14px/20px Roboto, sans-serif;
+}
