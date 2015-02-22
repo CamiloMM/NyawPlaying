@@ -17,5 +17,10 @@ Currently the start-up time is much slower than I want it to be. This will be fi
 
 Moreover, you'll have to bear with a pink color scheme at the moment.
 
+## Bugs? Suggestions? Having Trouble?
+
+Even though this was designed for a specific use-case, other people are free to use it too. The source code is open, but if you're an artist, it is probably not useful to you. Instead, if you're having any trouble with it, just [file an issue] and I'll try to help you :)
+
 [Hyanna-Natsu]: http://hyanna-natsu.deviantart.com/
 [the releases section]: https://github.com/CamiloMM/NyawPlaying/releases
+[file an issue]: https://github.com/CamiloMM/NyawPlaying/issues
