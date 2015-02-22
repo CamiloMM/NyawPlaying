@@ -130,6 +130,12 @@ body, html { padding: 0; }
     background: #888;
     text-align: center;
     cursor: pointer;
+    box-shadow: 0 0 2px 1px #C2C2C2, inset 1px -1px 2px 1px #777;
+}
+
+#options .close:hover {
+    background: #999;
+    box-shadow: 0 0 3px 1px #CFCFCF, inset 1px -1px 2px 1px #888;
 }
 
 #styles {
