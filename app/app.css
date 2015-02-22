@@ -101,10 +101,52 @@ body, html { padding: 0; }
 #options {
     z-index: 64;
     visibility: hidden;
+    background: #AAA;
+}
+
+#options h3 {
+    position: absolute;
+    margin: 0;
+    padding: 0 4px;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 20px;
+    font: 16px/20px Asap, sans-serif;
+    color: #666;
+    text-shadow: 0 1px 0 #CCC;
+}
+
+#styles {
+    position: absolute;
+    top: 21px;
+    left: 2px;
+    bottom: 3px;
+    right: 2px;
+}
+
+.style {
+    display: inline-block;
+    position: relative;
+    margin: 0 2px;
+    height: 20px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    background: #FB969F;
+    border-bottom: 4px solid #CF777F;
+    color: #FFDFD9;
+    font: 14px/20px Asap, sans-serif;
+    box-shadow: 0 0 2px 1px #888;
+}
+
+.style:hover {
+    box-shadow: 0 0 2px 1px #EEE;
 }
 
 /* Color scheme declarations */
 
+/* HyanPink ("pink") */
 [data-style="pink"] #title                        {      color: #FFF2F0; }
 [data-style="pink"] #artist                       {      color: #FFDFD9; }
 [data-style="pink"] #progress-background .time    {      color: #CF777F; }
@@ -112,7 +154,6 @@ body, html { padding: 0; }
 [data-style="pink"] .progress                     { background: #FB969F; }
 [data-style="pink"] #progress-background .bar     { background: #CF777F; }
 [data-style="pink"] #progress-overlay .bar        { background: #FFBDB1; }
-[data-style="pink"] #options                      { background: #FB969F; }
 [data-style="pink"] [data-status="playing"] #icon { background: url('icons/play.png' ); }
 [data-style="pink"] [data-status="paused"]  #icon { background: url('icons/pause.png'); }
 [data-style="pink"] [data-status="stopped"] #icon { background: url('icons/stop.png' ); }
