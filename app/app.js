@@ -3,6 +3,8 @@ var gui    = require('nw.gui');
 var Window = gui.Window.get();
 
 $(function() {
+    $('body').attr('data-style', localStorage.style || 'pink');
+    
     function connect(callback) {
         var eventSource = new EventSource('http://localhost:14420/playback/events');
         eventSource.onopen = function(event) {
@@ -75,6 +77,7 @@ $(function() {
         var name = $(this).data('option');
         $('body').attr('data-style', name);
         $('#options').css({visibility: 'hidden'});
+        localStorage.style = name;
     });
 });
 
