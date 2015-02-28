@@ -70,6 +70,12 @@ $(function() {
     $('#options .close').click(function() {
         $('#options').css({visibility: 'hidden'});
     });
+
+    $('#styles .style').click(function() {
+        var name = $(this).data('option');
+        $('body').attr('data-style', name);
+        $('#options').css({visibility: 'hidden'});
+    });
 });
 
 // Converts seconds to M:SS format
