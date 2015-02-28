@@ -188,3 +188,32 @@ body, html { padding: 0; }
     border-bottom: 4px solid #33B5E5;
     font: 14px/20px Roboto, sans-serif;
 }
+[data-style=holo-d] #title                      {      color: #33B5E5; }
+[data-style=holo-d] #artist                     {      color: #96999B; }
+[data-style=holo-d] #progress-background .time  {      color: #D2D2D2; }
+[data-style=holo-d] #progress-overlay .time     {      color: #D2D2D2; }
+[data-style=holo-d] .progress                   { background: #202020; }
+[data-style=holo-d] #progress-background .bar   { background: #33B5E5; height: 1px; }
+[data-style=holo-d] #progress-overlay .bar      { background: #33B5E5; }
+[data-style=holo-d] [data-status=playing] #icon { background: url(icons/holo-d/play.png ); }
+[data-style=holo-d] [data-status=paused]  #icon { background: url(icons/holo-d/pause.png); }
+[data-style=holo-d] [data-status=stopped] #icon { background: url(icons/holo-d/stop.png ); }
+[data-style=holo-d] #title {
+    top: 3px;
+    font: 18px/21px Roboto, sans-serif, "Meiryo UI", "Meiryo",
+    "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
+    "Microsoft JhengHei UI", "Microsoft JhengHei";
+}
+[data-style=holo-d] #artist {
+    top: 22px;
+    font: 15px/17px Roboto, sans-serif, "Meiryo UI", "Meiryo",
+    "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
+    "Microsoft JhengHei UI", "Microsoft JhengHei";
+}
+[data-style=holo-d] .progress .time {
+    width: 48px;
+    font: 16px Roboto, sans-serif;
+    left: calc(100vw - 55px);
+    top: 5px;
+    letter-spacing: 0px;
+}
