@@ -177,9 +177,9 @@ body, html { padding: 0; }
 [data-style="pink"] .progress                     { background: #FB969F; }
 [data-style="pink"] #progress-background .bar     { background: #CF777F; }
 [data-style="pink"] #progress-overlay .bar        { background: #FFBDB1; }
-[data-style="pink"] [data-status="playing"] #icon { background: url('icons/play.png' ); }
-[data-style="pink"] [data-status="paused"]  #icon { background: url('icons/pause.png'); }
-[data-style="pink"] [data-status="stopped"] #icon { background: url('icons/stop.png' ); }
+[data-style="pink"] [data-status="playing"] #icon { background: url(icons/pink/play.png ); }
+[data-style="pink"] [data-status="paused"]  #icon { background: url(icons/pink/pause.png); }
+[data-style="pink"] [data-status="stopped"] #icon { background: url(icons/pink/stop.png ); }
 
 /* Holo Dark ("holo-d") */
 [data-option="holo-d"].style {
