@@ -164,25 +164,25 @@ body, html { padding: 0; }
 /* Color scheme declarations */
 
 /* HyanPink ("pink") */
-[data-option="pink"].style {
+[data-option=pink].style {
     background: #FB969F;
     color: #FFDFD9;
     border-bottom: 4px solid #CF777F;
     font: 14px/20px Asap, sans-serif;
 }
-[data-style="pink"] #title                        {      color: #FFF2F0; }
-[data-style="pink"] #artist                       {      color: #FFDFD9; }
-[data-style="pink"] #progress-background .time    {      color: #CF777F; }
-[data-style="pink"] #progress-overlay .time       {      color: #FFBDB1; }
-[data-style="pink"] .progress                     { background: #FB969F; }
-[data-style="pink"] #progress-background .bar     { background: #CF777F; }
-[data-style="pink"] #progress-overlay .bar        { background: #FFBDB1; }
-[data-style="pink"] [data-status="playing"] #icon { background: url(icons/pink/play.png ); }
-[data-style="pink"] [data-status="paused"]  #icon { background: url(icons/pink/pause.png); }
-[data-style="pink"] [data-status="stopped"] #icon { background: url(icons/pink/stop.png ); }
+[data-style=pink] #title                      {      color: #FFF2F0; }
+[data-style=pink] #artist                     {      color: #FFDFD9; }
+[data-style=pink] #progress-background .time  {      color: #CF777F; }
+[data-style=pink] #progress-overlay .time     {      color: #FFBDB1; }
+[data-style=pink] .progress                   { background: #FB969F; }
+[data-style=pink] #progress-background .bar   { background: #CF777F; }
+[data-style=pink] #progress-overlay .bar      { background: #FFBDB1; }
+[data-style=pink] [data-status=playing] #icon { background: url(icons/pink/play.png ); }
+[data-style=pink] [data-status=paused]  #icon { background: url(icons/pink/pause.png); }
+[data-style=pink] [data-status=stopped] #icon { background: url(icons/pink/stop.png ); }
 
 /* Holo Dark ("holo-d") */
-[data-option="holo-d"].style {
+[data-option=holo-d].style {
     background: #202020;
     color: #33B5E5;
     border-bottom: 4px solid #33B5E5;
