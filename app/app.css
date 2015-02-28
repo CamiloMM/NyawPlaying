@@ -183,6 +183,7 @@ body, html { padding: 0; }
 
 /* Holo Dark ("holo-d") */
 [data-option=holo-d].style {
+    top: -1px;
     background: #202020;
     color: #33B5E5;
     border-bottom: 4px solid #33B5E5;
