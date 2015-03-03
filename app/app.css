@@ -183,11 +183,10 @@ body, html { padding: 0; }
 
 /* Holo Dark ("holo-d") */
 [data-option=holo-d].style {
-    top: -1px;
     background: #202020;
     color: #33B5E5;
     border-bottom: 4px solid #33B5E5;
-    font: 14px/20px Roboto, sans-serif;
+    font: 14px/22px Roboto, sans-serif;
 }
 [data-style=holo-d] #title                      {      color: #33B5E5; }
 [data-style=holo-d] #artist                     {      color: #96999B; }
@@ -217,4 +216,13 @@ body, html { padding: 0; }
     left: calc(100vw - 55px);
     top: 5px;
     letter-spacing: 0px;
+}
+
+/* Crimson ("crimson") */
+[data-option=crimson].style {
+    background: linear-gradient(to bottom, #EEEEEE 0%,#A2A2A2 100%);
+    color: #F52A2A;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+    border-bottom: 4px solid #B61F1F;
+    font: 600 14px/20px "Open Sans", sans-serif;
 }
