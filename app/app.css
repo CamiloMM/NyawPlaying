@@ -269,3 +269,43 @@ body, html { padding: 0; }
     top: 2px;
     font: 15px/20px Ubuntu, sans-serif;
 }
+[data-style=ubuntu] #title                      {      color: #fbf2f3; }
+[data-style=ubuntu] #artist                     {      color: #ffdfd9; }
+[data-style=ubuntu] #progress-background .time  {      color: #f6f6f6; }
+[data-style=ubuntu] #progress-overlay .time     {    display: none;    }
+[data-style=ubuntu] [data-status=playing] #icon { background: url(images/ubuntu/play.png ); }
+[data-style=ubuntu] [data-status=paused]  #icon { background: url(images/ubuntu/pause.png); }
+[data-style=ubuntu] [data-status=stopped] #icon { background: url(images/ubuntu/stop.png ); }
+[data-style=ubuntu] #info                       {      right: 100px; }
+[data-style=ubuntu] #progress-overlay {
+    background: linear-gradient(to right, rgba(255,255,255,0.05) 0%,rgba(255,255,255,0.05) 75%,rgba(255,255,255,0.2) 100%);
+    background-size: 100vw 100%;
+    background-position: right center;
+}
+[data-style=ubuntu] #program {
+    background: url(images/ubuntu/background.png);
+    background-size: 100% 100%;
+}
+[data-style=ubuntu] #title {
+    top: 3px;
+    font: 500 18px/21px Ubuntu, Roboto, sans-serif, "Meiryo UI", "Meiryo",
+    "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
+    "Microsoft JhengHei UI", "Microsoft JhengHei";
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+[data-style=ubuntu] #artist {
+    top: 24px;
+    font: 400 15px/17px Ubuntu, Roboto, sans-serif, "Meiryo UI", "Meiryo",
+    "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
+    "Microsoft JhengHei UI", "Microsoft JhengHei";
+    -webkit-text-stroke: 0.25px; /* Ugly solution to make font weight just right */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+[data-style=ubuntu] .progress .time {
+    width: 108px;
+    font: 300 36px Ubuntu, sans-serif;
+    left: calc(100vw - 115px);
+    top: 2px;
+    letter-spacing: 0px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+}
