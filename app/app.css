@@ -177,9 +177,9 @@ body, html { padding: 0; }
 [data-style=pink] .progress                   { background: #FB969F; }
 [data-style=pink] #progress-background .bar   { background: #CF777F; }
 [data-style=pink] #progress-overlay .bar      { background: #FFBDB1; }
-[data-style=pink] [data-status=playing] #icon { background: url(icons/pink/play.png ); }
-[data-style=pink] [data-status=paused]  #icon { background: url(icons/pink/pause.png); }
-[data-style=pink] [data-status=stopped] #icon { background: url(icons/pink/stop.png ); }
+[data-style=pink] [data-status=playing] #icon { background: url(images/pink/play.png ); }
+[data-style=pink] [data-status=paused]  #icon { background: url(images/pink/pause.png); }
+[data-style=pink] [data-status=stopped] #icon { background: url(images/pink/stop.png ); }
 
 /* Holo Dark ("holo-d") */
 [data-option=holo-d].style {
@@ -196,9 +196,9 @@ body, html { padding: 0; }
 [data-style=holo-d] .progress                   { background: #202020; }
 [data-style=holo-d] #progress-background .bar   { background: #33B5E5; height: 1px; }
 [data-style=holo-d] #progress-overlay .bar      { background: #33B5E5; }
-[data-style=holo-d] [data-status=playing] #icon { background: url(icons/holo-d/play.png ); }
-[data-style=holo-d] [data-status=paused]  #icon { background: url(icons/holo-d/pause.png); }
-[data-style=holo-d] [data-status=stopped] #icon { background: url(icons/holo-d/stop.png ); }
+[data-style=holo-d] [data-status=playing] #icon { background: url(images/holo-d/play.png ); }
+[data-style=holo-d] [data-status=paused]  #icon { background: url(images/holo-d/pause.png); }
+[data-style=holo-d] [data-status=stopped] #icon { background: url(images/holo-d/stop.png ); }
 [data-style=holo-d] #title {
     top: 3px;
     font: 18px/21px Roboto, sans-serif, "Meiryo UI", "Meiryo",
