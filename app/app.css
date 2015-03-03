@@ -140,7 +140,7 @@ body, html { padding: 0; }
 
 #styles {
     position: absolute;
-    top: 21px;
+    top: 19px;
     left: 2px;
     bottom: 3px;
     right: 2px;
@@ -256,4 +256,16 @@ body, html { padding: 0; }
     "Meiryo", "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
     "Microsoft JhengHei UI", "Microsoft JhengHei";
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Ubuntu ("ubuntu") */
+[data-option=ubuntu].style {
+    background: url(images/ubuntu/background.png);
+    background-size: 100% 100%;
+    color: #FBF2F3;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    height: 20px;
+    padding: 2px 0 2px 0;
+    top: 2px;
+    font: 15px/20px Ubuntu, sans-serif;
 }
