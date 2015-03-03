@@ -227,3 +227,33 @@ body, html { padding: 0; }
     border-bottom: 4px solid #B61F1F;
     font: 600 14px/20px "Open Sans", sans-serif;
 }
+[data-style=crimson] #title                      {      color: #F52A2A; }
+[data-style=crimson] #artist                     {      color: #5F5F5F; }
+[data-style=crimson] .progress .time             {    display: none;    }
+[data-style=crimson] #progress-background .bar   { background: #B61F1F; }
+[data-style=crimson] #progress-overlay .bar      { background: #F52A2A; }
+[data-style=crimson] [data-status=playing] #icon { background: url(images/crimson/play.png ); }
+[data-style=crimson] [data-status=paused]  #icon { background: url(images/crimson/pause.png); }
+[data-style=crimson] [data-status=stopped] #icon { background: url(images/crimson/stop.png ); }
+[data-style=crimson] #icon                       { left: 1px; }
+[data-style=crimson] #info                       { left: -1px; right: 10px; }
+[data-style=crimson] #program {
+    background: linear-gradient(to bottom, #EEEEEE 0%,#A2A2A2 100%);
+    box-shadow: inset 0 0 50px #FFF;
+    -webkit-font-feature-settings:"ss01" 1; 
+    font-feature-settings:"ss01" 1;
+}
+[data-style=crimson] #title {
+    top: 3px;
+    font: 600 16px/21px "Open Sans", Roboto, sans-serif, "Meiryo UI",
+    "Meiryo", "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
+    "Microsoft JhengHei UI", "Microsoft JhengHei";
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+[data-style=crimson] #artist {
+    top: 21px;
+    font: italic 600 15px/17px "Open Sans", Roboto, sans-serif, "Meiryo UI",
+    "Meiryo", "Malgun Gothic", "Microsoft YaHei UI", "Microsoft YaHei",
+    "Microsoft JhengHei UI", "Microsoft JhengHei";
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
