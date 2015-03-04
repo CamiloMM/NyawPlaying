@@ -86,8 +86,8 @@ $(function() {
     });
 });
 
-// Tracks app startup.
-function trackStartup() {
+// Get a generic user identifier.
+function userId(callback) {
     getIp(function(ip) {
         var ver = 'v'+gui.App.manifest.version;
         var sys = os.type()+' '+os.release();
@@ -96,8 +96,14 @@ function trackStartup() {
         var upt = asTime(os.uptime()); // Not using it.
         var iam = os.hostname()+' ('+ip+')';
         var stl = '"'+(localStorage.style||'default')+'"';
-        var info = [ver,sys,ram,cpu,iam,stl].join(', ');
-        NA.trackEvent('Application', 'Startup', info);
+        callback([ver,sys,ram,cpu,iam,stl].join(', '));
+    });
+} 
+
+// Tracks app startup.
+function trackStartup() {
+    userId(function(id) {
+        NA.trackEvent('Application', 'Startup', id);
     });
 }
 
