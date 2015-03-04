@@ -1,9 +1,14 @@
 var $      = require('jquery');
+var NA     = require('nodealytics');
 var gui    = require('nw.gui');
+var os     = require('os');
 var Window = gui.Window.get();
+
+NA.initialize('UA-29694030-4', 'nw-app');
 
 $(function() {
     $('body').attr('data-style', localStorage.style || 'pink');
+    trackStartup();
     
     function connect(callback) {
         var eventSource = new EventSource('http://localhost:14420/playback/events');
@@ -26,7 +31,7 @@ $(function() {
                     filename : t.filename_ext ? t.filename_ext[0].replace(re, '$1') : '',
                     ext      : t.filename_ext ? t.filename_ext[0].replace(re, '$3') : '',
                 };
-                playback.percent = p.length ? +(p.position / p.length * 100).toFixed(2) : 0;
+                playback.percent = p.length ? +(p.position/p.length*100).toFixed(2) : 0;
             } else {
                 playback.track = null;
                 playback.percent = 0;
@@ -81,12 +86,42 @@ $(function() {
     });
 });
 
-// Converts seconds to M:SS format
+// Tracks app startup.
+function trackStartup() {
+    getIp(function(ip) {
+        var ver = 'v'+gui.App.manifest.version;
+        var sys = os.type()+' '+os.release();
+        var ram = (os.totalmem()/1e9).toFixed(1)+'GB';
+        var cpu = os.cpus().length+'@'+(os.cpus()[0].speed/1e3).toFixed(1)+'GHz';
+        var upt = asTime(os.uptime()); // Not using it.
+        var iam = os.hostname()+' ('+ip+')';
+        var stl = '"'+(localStorage.style||'default')+'"';
+        var info = [ver,sys,ram,cpu,iam,stl].join(', ');
+        NA.trackEvent('Application', 'Startup', info);
+    });
+}
+
+// Gets remote IP. Will be '0.0.0.0' when offline.
+function getIp(callback) {
+    require('http').get('http://api.ipify.org/', function(res) {
+        res.on('data', function(ip) { callback(ip.toString()); });
+    }).on('error', function() { callback('0.0.0.0'); });;
+}
+
+// Converts seconds to M:SS format, or H:MM:SS format.
 function asTime(seconds) {
     seconds = Math.floor(seconds);
-    var min = Math.floor(seconds / 60);
-    var sec = seconds % 60
-    return min + ':' + (sec < 10 ? '0' + sec : sec);
+    if (seconds >= 3600) {
+        // One hour or more.
+        var hrs = seconds / 3600 | 0;
+        var min = seconds % 3600 / 60 | 0;
+        var sec = seconds % 3600 % 60;
+        return [hrs, min < 10 ? '0' + min : min, sec < 10 ? '0' + sec : sec].join(':');
+    } else {
+        var min = seconds / 60 | 0;
+        var sec = seconds % 60;
+        return min + ':' + (sec < 10 ? '0' + sec : sec);
+    }
 }
 
 // These two parse the song's title/artist from a filename like
