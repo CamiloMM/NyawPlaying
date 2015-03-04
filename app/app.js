@@ -102,9 +102,11 @@ function trackStartup() {
 }
 
 // Gets remote IP. Will be '0.0.0.0' when offline.
+var ipCache = null;
 function getIp(callback) {
+    if (ipCache) return callback(ipCache);
     require('http').get('http://api.ipify.org/', function(res) {
-        res.on('data', function(ip) { callback(ip.toString()); });
+        res.on('data', function(ip) { callback(ipCache = ip.toString()); });
     }).on('error', function() { callback('0.0.0.0'); });;
 }
 
