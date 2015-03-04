@@ -55,7 +55,9 @@ $(function() {
             $('#artist').text(track.artist || parseArtist(track.filename));
             $('.progress .time').text(asTime(track.position));
             $('#progress-overlay').width(playback.percent + '%');
+            trackSong(track.title+', '+track.artist+', '+track.filename);
         } else {
+            lastSong = null;
             $('#program').attr('data-status', 'stopped');
             $('#title, #artist, .progress .time').empty();
             $('#progress-overlay').width('0%');
@@ -103,7 +105,22 @@ function userId(callback) {
 // Tracks app startup.
 function trackStartup() {
     userId(function(id) {
-        NA.trackEvent('Application', 'Startup', id);
+        NA.trackPage('App Startup', '/nw-app', function () {
+            NA.trackEvent('Application', 'Startup', id);
+        });
+    });
+}
+
+// Track song change, if a song is playing, and if it really changed.
+var lastSong = null;
+function trackSong(song) {
+    if (song === lastSong) return;
+    lastSong = song;
+    userId(function(id) {
+        var style = localStorage.style || 'default';
+        NA.trackPage('Track Playback', '/nw-app/' + style, function () {
+            NA.trackEvent('Application', 'PlayTrack', id);
+        });
     });
 }
 
