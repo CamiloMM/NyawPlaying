@@ -3,7 +3,19 @@ Simple window showing "now playing" song of Foobar2000 (for use with e.g., OBS).
 
 Developed on behalf of [Hyanna-Natsu].
 
-<p align="center"><img src="resources/screenshot-1.png"></p>
+<p align="center"><img src="resources/screenshot.png"></p>
+
+## Maybe wait for the next version
+
+Next version has theming support. It's fine to use the one that's here, but it's only pink so you may want to wait for the next one, or use the current and check later. Come here in a week or so. Examples:
+
+<p align="center"><img src="resources/theme-pink.png"></p>
+
+<p align="center"><img src="resources/theme-holo-d.png"></p>
+
+<p align="center"><img src="resources/theme-crimson.png"></p>
+
+<p align="center"><img src="resources/theme-ubuntu.png"></p>
 
 ## How to Install
 
