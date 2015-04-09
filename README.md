@@ -7,7 +7,7 @@ Developed on behalf of [Hyanna-Natsu].
 
 ## Maybe wait for the next version
 
-Next version has theming support. It's fine to use the one that's here, but it's only pink so you may want to wait for the next one, or use the current and check later. Come here in a week or so. Examples:
+Next version has theming support. It's fine to use the one that's here, but it's only pink so you may want to wait for the next one, or use the current and check later. Come here in a month or so. Examples:
 
 <p align="center"><img src="resources/theme-pink.png"></p>
 
