@@ -1,3 +1,8 @@
+Edit: holy shit this is old, if it wasn't clear I ended up not developing it further.
+Leaving here in case it helps anyone. Probably more as an idea than as an implementation.
+
+---
+
 # NyawPlaying
 Simple window showing "now playing" song of Foobar2000 (for use with e.g., OBS).
 
